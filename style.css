@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.camouflage {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  position: relative;
+  margin: 0 auto;
+}
+
+.camouflage::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camouflage.hidden::before {
+  display: none;
+}
